@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Form 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen space-y-10 p-6">
+    <!-- Add Profile Form -->
+    <div class="w-full w-[85%] lg:max-w-md bg-white p-6 rounded-2xl shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Add Profile</h2>
+
+        <div id="onsubmit" class="space-y-4">
+            <!-- Name -->
+            <div>
+                <label for="name" class="block text-lg lg:text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" placeholder="Enter your name"
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <!-- Role -->
+            <div>
+                <label for="role" class="block  text-lg lg:text-sm font-medium text-gray-700">Role</label>
+                <input type="text" id="role" placeholder="Enter your role"
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <!-- Location -->
+            <div>
+                <label for="location" class="block text-lg lg:text-sm font-medium text-gray-700">Location</label>
+                <input type="text" id="location" placeholder="Enter your location"
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <!-- Bio -->
+            <div>
+                <label for="bio" class="block text-lg lg:text-sm font-medium text-gray-700">Bio</label>
+                <textarea id="bio" rows="3" placeholder="Write a short bio..."
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+            </div>
+
+            <!-- Profile Picture URL -->
+            <div>
+                <label for="profile" class="block text-lg lg:text-sm font-medium text-gray-700">Profile Picture URL</label>
+                <input type="url" id="profile" placeholder="https://example.com/profile.jpg"
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <!-- Add Button -->
+            <div class="pt-4">
+                <button onclick="addProfile()"
+                    class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-200">
+                    Add
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Profile Cards Section -->
+    <div class="max-w-4xl w-full">
+        <h1 id="profileCards" class="text-2xl font-semibold mb-6 text-center">Profile Cards</h1>
+
+        <!-- Search Bar -->
+        <div class="mb-6 flex justify-center gap-2">
+            <input type="text" id="search" placeholder="Search profile..."
+                class="w-[50%] sm:w-1/2 px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            <button onclick="searchProfile()" class="bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition duration-200">Search</button>
+        </div>
+
+        <!-- Cards Container -->
+        <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- here add card -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
